@@ -14,6 +14,7 @@
 		4E4D266523EB155700EFFC6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D266423EB155700EFFC6A /* Assets.xcassets */; };
 		4E4D266823EB155700EFFC6A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D266723EB155700EFFC6A /* Preview Assets.xcassets */; };
 		4E4D266B23EB155700EFFC6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D266923EB155700EFFC6A /* LaunchScreen.storyboard */; };
+		4E8C98A723FFFBD800F0BEEA /* Challenge3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C98A623FFFBD800F0BEEA /* Challenge3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4E4D266723EB155700EFFC6A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E4D266A23EB155700EFFC6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E4D266C23EB155700EFFC6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E8C98A623FFFBD800F0BEEA /* Challenge3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				4E4D266023EB155500EFFC6A /* SceneDelegate.swift */,
 				4E4D266223EB155500EFFC6A /* Challenge1.swift */,
 				4E0ED12823FFDE3F00583C78 /* Challenge2.swift */,
+				4E8C98A623FFFBD800F0BEEA /* Challenge3.swift */,
 				4E4D266423EB155700EFFC6A /* Assets.xcassets */,
 				4E4D266923EB155700EFFC6A /* LaunchScreen.storyboard */,
 				4E4D266C23EB155700EFFC6A /* Info.plist */,
@@ -152,6 +155,7 @@
 				4E0ED12923FFDE3F00583C78 /* Challenge2.swift in Sources */,
 				4E4D265F23EB155500EFFC6A /* AppDelegate.swift in Sources */,
 				4E4D266123EB155500EFFC6A /* SceneDelegate.swift in Sources */,
+				4E8C98A723FFFBD800F0BEEA /* Challenge3.swift in Sources */,
 				4E4D266323EB155500EFFC6A /* Challenge1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
