@@ -2,18 +2,20 @@ import SwiftUI
 
 extension View {
     func badge(count: Int = 0) -> some View {
-        self.overlay(ZStack {
-            if count > 0 {
-                Text("\(count)")
-                    .font(Font.body.monospacedDigit())
-                    .padding(8)
-                    .background(Circle().fill(Color.red))
+        ZStack(alignment: .topTrailing) {
+            self
+            ZStack {
+                if count != 0 {
+                    Text("\(count)")
+                        .font(.footnote)
+                        .frame(width: 24, height: 24)
+                        .background(Circle().fill(Color.red))
+                        .animation(nil)
+                        .transition(.scale)
+                }
             }
+            .offset(x: 12, y: -12)
         }
-        .alignmentGuide(.trailing) { $0.width / 2 }
-        .alignmentGuide(.top) { $0.height / 2 }
-
-            , alignment: .topTrailing)
     }
 }
 
@@ -33,6 +35,7 @@ struct ContentView: View {
                     RoundedRectangle(cornerRadius: 5)
                         .fill(Color.gray))
                 .badge(count: counter)
+                .animation(.default)
         }.padding()
     }
 }
