@@ -9,15 +9,16 @@ struct Challenge5: View {
 	@State var toggle = true
 
 	var body: some View {
-		VStack {
-			Button("Toggle") {
-				withAnimation(.default) {
-					self.toggle.toggle()
-				}
+		ZStack {
+			Rectangle().foregroundColor(.white)
+				.onTapGesture {
+					withAnimation(.default) {
+						self.toggle.toggle()
+					}
 			}
 			AnimatedPath(from: toggle ? p1 : p2, to: p3)
 				.stroke(lineWidth: 2)
-		}
+		}.frame(width: 150, height: 125)
 	}
 }
 
@@ -45,6 +46,6 @@ struct AnimatedPath: Shape {
 
 struct Challenge5_Previews: PreviewProvider {
 	static var previews: some View {
-		Challenge5()
+		Challenge5().objcIOStyle()
 	}
 }

@@ -56,6 +56,6 @@ struct Challenge3: View {
 
 struct Challenge3_Previews: PreviewProvider {
 	static var previews: some View {
-		Challenge3().previewLayout(.sizeThatFits)
+		Challenge3().objcIOStyle()
 	}
 }

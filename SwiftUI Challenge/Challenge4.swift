@@ -42,26 +42,12 @@ struct Challenge4: View {
 				Text("Eliud Kipchoge")
 			}
 		}
-		.padding()
-		.background(
-			Color.white
-				.cornerRadius(15)
-				.shadow(radius: 10)
-		)
 	}
 }
 
 
 struct Challenge4_Previews: PreviewProvider {
-	private static let topColor = Color(red: 88 / 255, green: 206 / 255, blue: 217 / 255)
-	private static let bottomColor = Color(red: 0 / 255, green: 96 / 255, blue: 100 / 255)
-
 	static var previews: some View {
-		ZStack {
-			LinearGradient(gradient: Gradient(colors: [topColor, bottomColor]), startPoint: .top, endPoint: .bottom)
-				.edgesIgnoringSafeArea(.all)
-
-			Challenge4()
-		}
+		Challenge4().objcIOStyle()
 	}
 }

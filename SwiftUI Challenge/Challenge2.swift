@@ -42,5 +42,6 @@ struct Challenge2_Previews: PreviewProvider {
 	static var previews: some View {
 		Challenge2(bars: 2, totalBars: 5)
 			.frame(width: 150, height: 90)
+			.objcIOStyle()
 	}
 }

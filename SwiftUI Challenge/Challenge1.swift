@@ -19,7 +19,7 @@ extension View {
     }
 }
 
-struct ContentView: View {
+struct Challenge1: View {
     @State var counter = 5
 
     var body: some View {
@@ -42,6 +42,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Challenge1().objcIOStyle()
     }
 }
