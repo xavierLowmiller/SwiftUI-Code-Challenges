@@ -16,6 +16,7 @@
 		4E4D266823EB155700EFFC6A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D266723EB155700EFFC6A /* Preview Assets.xcassets */; };
 		4E4D266B23EB155700EFFC6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D266923EB155700EFFC6A /* LaunchScreen.storyboard */; };
 		4E8C98A723FFFBD800F0BEEA /* Challenge3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C98A623FFFBD800F0BEEA /* Challenge3.swift */; };
+		4EBEE9A72419418800E0EE75 /* Challenge6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBEE9A62419418800E0EE75 /* Challenge6.swift */; };
 		4EEFF763240EA97D00788542 /* Challenge4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFF762240EA97D00788542 /* Challenge4.swift */; };
 		4EEFF767240EB62400788542 /* Challenge5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFF766240EB62400788542 /* Challenge5.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		4E4D266A23EB155700EFFC6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E4D266C23EB155700EFFC6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E8C98A623FFFBD800F0BEEA /* Challenge3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge3.swift; sourceTree = "<group>"; };
+		4EBEE9A62419418800E0EE75 /* Challenge6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge6.swift; sourceTree = "<group>"; };
 		4EEFF762240EA97D00788542 /* Challenge4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge4.swift; sourceTree = "<group>"; };
 		4EEFF766240EB62400788542 /* Challenge5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge5.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				4E8C98A623FFFBD800F0BEEA /* Challenge3.swift */,
 				4EEFF762240EA97D00788542 /* Challenge4.swift */,
 				4EEFF766240EB62400788542 /* Challenge5.swift */,
+				4EBEE9A62419418800E0EE75 /* Challenge6.swift */,
 				4E491B9824141EEE00BCA378 /* ObjcIOStyle.swift */,
 				4E4D266023EB155500EFFC6A /* SceneDelegate.swift */,
 				4E4D266423EB155700EFFC6A /* Assets.xcassets */,
@@ -167,6 +170,7 @@
 				4E491B9924141EEE00BCA378 /* ObjcIOStyle.swift in Sources */,
 				4E4D266123EB155500EFFC6A /* SceneDelegate.swift in Sources */,
 				4EEFF767240EB62400788542 /* Challenge5.swift in Sources */,
+				4EBEE9A72419418800E0EE75 /* Challenge6.swift in Sources */,
 				4E8C98A723FFFBD800F0BEEA /* Challenge3.swift in Sources */,
 				4E4D266323EB155500EFFC6A /* Challenge1.swift in Sources */,
 			);
