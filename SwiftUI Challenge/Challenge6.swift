@@ -11,11 +11,17 @@ struct Challenge6: View {
 	}
 
 	var body: some View {
-		Chart(data: data, pct: pct)
-			.stroke(lineWidth: 2)
-			.fill(Color.red)
-			.onAppear {
-				withAnimation(.easeInOut(duration: 2)) { self.pct = 1 }
+		ZStack {
+			Chart(data: data, pct: pct)
+				.stroke(lineWidth: 2)
+				.fill(Color.red)
+			PointIndicator(data: data, pct: pct)
+				.fill(Color.red)
+		}
+		.onAppear {
+			withAnimation(.easeInOut(duration: 2)) {
+				self.pct = 1
+			}
 		}
 	}
 }
@@ -30,29 +36,41 @@ struct Chart: Shape {
 	}
 
 	func path(in rect: CGRect) -> Path {
+		data
+			.path(in: rect)
+			.trimmedPath(from: 0, to: pct)
+	}
+}
 
-		guard pct != 0 else { return Path() }
+struct PointIndicator: Shape {
+	let data: [Double]
+	var pct: CGFloat
 
-		var path = Path()
-		path.addLines(values.chart(in: rect))
+	var animatableData: CGFloat {
+		get { pct }
+		set { pct = newValue }
+	}
 
-		var chart = path.trimmedPath(from: 0, to: pct)
-		let endPoint = path.trimmedPath(from: pct - 0.0001, to: pct)
-		chart.addEllipse(in: CGRect(
-			x: endPoint.boundingRect.midX - 5,
-			y: endPoint.boundingRect.midY - 5,
-			width: 10,
-			height: 10)
-		)
+	func path(in rect: CGRect) -> Path {
 
-		return chart
+		let endPoint: CGRect = pct == 0
+			? .zero
+			: data
+				.path(in: rect)
+				.trimmedPath(from: pct - 0.000000001, to: pct)
+				.boundingRect
+
+		let box = CGRect(x: endPoint.midX - 5, y: endPoint.midY - 5,
+										 width: 10, height: 10)
+
+		return Path(ellipseIn: box)
 	}
 }
 
 struct Challenge6_Previews: PreviewProvider {
 	static var previews: some View {
 		Challenge6(data: values)
-		.frame(width: 300, height: 200)
+			.frame(width: 300, height: 200)
 			.objcIOStyle()
 	}
 }
@@ -70,6 +88,12 @@ private extension Array where Element == Double {
 			let y = rect.height - rect.height * CGFloat((value - min) / (max - min))
 
 			return CGPoint(x: x, y: y)
+		}
+	}
+
+	func path(in rect: CGRect) -> Path {
+		Path {
+			$0.addLines(chart(in: rect))
 		}
 	}
 }
